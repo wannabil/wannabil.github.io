@@ -4,17 +4,60 @@ title: Home
 ---
 
 <div class="page">
-  <h1>Welcome 👋</h1>
-  <p>This is my Lanyon-powered site on GitHub Pages.</p>
+  <div class="hero-section">
+    <h1>Welcome to My Digital Space</h1>
+    <p class="hero-subtitle">I'm <strong>wannabil</strong>, and this is my corner of the internet where I share thoughts, projects, and discoveries.</p>
+    <div class="hero-actions">
+      <a href="{{ '/about/' | relative_url }}" class="btn">Learn More About Me</a>
+      <a href="{{ '/posts/' | relative_url }}" class="btn">Read My Posts</a>
+    </div>
+  </div>
 
-  <h2>Latest posts</h2>
-  <ul class="post-list">
-    {% for post in site.posts limit:5 %}
-      <li>
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        <span class="post-meta">— {{ post.date | date: "%b %d, %Y" }}</span>
-      </li>
-    {% endfor %}
-  </ul>
+  <div class="content-section">
+    <h2>Latest Posts</h2>
+    <p>Here are my most recent thoughts and updates:</p>
+    
+    {% if site.posts.size > 0 %}
+      <ul class="post-list">
+        {% for post in site.posts limit:5 %}
+          <li>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            <span class="post-meta">— {{ post.date | date: "%B %d, %Y" }}</span>
+            {% if post.excerpt %}
+              <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 150 }}</p>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+      
+      {% if site.posts.size > 5 %}
+        <div class="view-all-posts">
+          <a href="{{ '/posts/' | relative_url }}" class="btn">View All Posts</a>
+        </div>
+      {% endif %}
+    {% else %}
+      <div class="no-posts">
+        <p>No posts yet, but stay tuned! I'm working on some exciting content.</p>
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="content-section">
+    <h2>What I'm Working On</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>Projects</h3>
+        <p>Building cool stuff and sharing the journey</p>
+      </div>
+      <div class="feature-card">
+        <h3>Writing</h3>
+        <p>Thoughts on technology, design, and life</p>
+      </div>
+      <div class="feature-card">
+        <h3>Design</h3>
+        <p>Creating beautiful and functional experiences</p>
+      </div>
+    </div>
+  </div>
 </div>
 
