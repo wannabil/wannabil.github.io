@@ -391,6 +391,11 @@ body {
     color: #666666;
     display: flex;
     align-items: center;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    pointer-events: none;
 }
 
 .profile-picture {
