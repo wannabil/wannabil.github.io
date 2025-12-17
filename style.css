@@ -151,6 +151,83 @@ button:hover {
     background-color: #4b5563;
 }
 
+/* Profile Section */
+.profile-section {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1rem 0;
+}
+
+.profile-link {
+    text-decoration: none;
+    display: inline-block;
+    transition: opacity 0.2s;
+}
+
+.profile-link:hover {
+    opacity: 0.8;
+}
+
+.profile-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.profile-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.profile-picture {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-link .profile-username {
+    font-size: 1rem;
+    color: #f9fafb;
+    font-weight: 500;
+}
+
+.checkmark-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    background: #3b82f6;
+    border-radius: 50%;
+    margin-left: 6px;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
+.profile-username .checkmark {
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* Footer */
 footer {
     text-align: center;
