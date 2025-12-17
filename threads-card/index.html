@@ -19,21 +19,19 @@
                 <div class="card-cutout card-cutout-top"></div>
                 <div class="card-cutout card-cutout-bottom"></div>
                 <div class="at-logo">@</div>
-                <div class="front-zip-cut"></div>
+                <div class="profile-cutoff profile-cutoff-front">- - - -</div>
             </div>
 
             <!-- Back Side -->
             <div class="card-face card-back">
                 <div class="card-cutout card-cutout-top"></div>
                 <div class="card-cutout card-cutout-bottom"></div>
-                <div class="at-logo-back">@</div>
-                <div class="back-zip-cut"></div>
                 <div class="back-section">
                     <div class="back-section-header">
                         <div class="back-section-label">Date</div>
-                        <div></div>
+                        <div class="back-section-logo">@</div>
                     </div>
-                    <div class="back-section-value">THU 6 JUL</div>
+                    <div class="back-section-value" id="current-date"></div>
                 </div>
 
                 <div class="back-section">
@@ -41,7 +39,7 @@
                         <div class="back-section-label">Time</div>
                         <div></div>
                     </div>
-                    <div class="back-section-value">07:00 MYT</div>
+                    <div class="back-section-value" id="current-time"></div>
                 </div>
 
                 <div class="back-section">
@@ -53,6 +51,7 @@
                 </div>
 
                 <div class="profile-section">
+                    <div class="profile-cutoff">- - - -</div>
                     <div class="profile-content">
                         <div class="profile-left">
                             <div class="profile-picture"><img src="wanbl-profile-picture.jpg" alt="wanbl profile"></div>
@@ -65,5 +64,42 @@
         </div>
     </label>
 
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            
+            // Format date: WED 17 DEC
+            const days = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+            const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+            const dayName = days[now.getDay()];
+            const day = now.getDate();
+            const monthName = months[now.getMonth()];
+            const dateStr = `${dayName} ${day} ${monthName}`;
+            const dateElement = document.getElementById('current-date');
+            if (dateElement) {
+                dateElement.textContent = dateStr;
+            }
+            
+            // Format time: HH:MM MYT (Malaysia Time)
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const timeStr = `${hours}:${minutes} MYT`;
+            const timeElement = document.getElementById('current-time');
+            if (timeElement) {
+                timeElement.textContent = timeStr;
+            }
+        }
+        
+        // Wait for DOM to load, then update immediately and every minute
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', function() {
+                updateDateTime();
+                setInterval(updateDateTime, 60000); // Update every minute
+            });
+        } else {
+            updateDateTime();
+            setInterval(updateDateTime, 60000); // Update every minute
+        }
+    </script>
 </body>
 </html>
