@@ -1,0 +1,412 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #101010;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+/* Checkbox hack for click-to-flip */
+#flip-toggle {
+    display: none;
+}
+
+.card-container {
+    position: relative;
+    width: 350px;
+    height: 500px;
+    cursor: grab;
+    padding: 10px;
+}
+
+.card-container:active {
+    cursor: grabbing;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+
+/* Continuous rotation animation */
+@keyframes continuousRotate {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    25% {
+        transform: rotateX(5deg) rotateY(10deg);
+    }
+    50% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    75% {
+        transform: rotateX(-5deg) rotateY(-10deg);
+    }
+    100% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+}
+
+/* Continuous rotation animation for flipped state */
+@keyframes continuousRotateFlipped {
+    0% {
+        transform: rotateX(0deg) rotateY(180deg);
+    }
+    25% {
+        transform: rotateX(5deg) rotateY(190deg);
+    }
+    50% {
+        transform: rotateX(0deg) rotateY(180deg);
+    }
+    75% {
+        transform: rotateX(-5deg) rotateY(170deg);
+    }
+    100% {
+        transform: rotateX(0deg) rotateY(180deg);
+    }
+}
+
+/* Apply continuous rotation when not hovered (front) */
+#flip-toggle:not(:checked) ~ .card-container:not(:hover) .card-inner {
+    animation: continuousRotate 8s linear infinite;
+}
+
+/* Apply continuous rotation when flipped and not hovered (back) */
+#flip-toggle:checked ~ .card-container:not(:hover) .card-inner {
+    animation: continuousRotateFlipped 8s linear infinite;
+}
+
+/* Stop rotation on hover - maintain flip state */
+#flip-toggle:not(:checked) ~ .card-container:hover .card-inner {
+    animation: none;
+    transform: rotateX(0deg) rotateY(0deg);
+}
+
+#flip-toggle:checked ~ .card-container:hover .card-inner {
+    animation: none;
+    transform: rotateX(0deg) rotateY(180deg);
+}
+
+/* Smooth transition for all transforms */
+.card-inner {
+    transition: transform 0.6s ease;
+}
+
+/* Card thickness - create edges */
+.card-inner::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e5e5e5 100%);
+    top: -8px;
+    left: 0;
+    transform-origin: bottom;
+    transform: rotateX(90deg);
+    border-radius: 16px 16px 0 0;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.card-inner::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e5e5e5 100%);
+    bottom: -8px;
+    left: 0;
+    transform-origin: top;
+    transform: rotateX(-90deg);
+    border-radius: 0 0 16px 16px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 16px;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+/* Circular cutouts */
+.card-cutout {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #101010;
+    z-index: 15;
+    pointer-events: none;
+    box-shadow: none !important;
+    border: none;
+    filter: none;
+}
+
+.card-cutout-top {
+    top: -20px;
+    z-index: 15;
+}
+
+.card-cutout-bottom {
+    bottom: -20px;
+    background: #101010 !important;
+    box-shadow: none !important;
+    filter: none;
+    z-index: 15;
+}
+
+.cutout-at {
+    position: absolute;
+    top: 2px;
+    right: 6px;
+    font-size: 12px;
+    color: #000000;
+    font-weight: 300;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    z-index: 11;
+    pointer-events: none;
+    line-height: 1;
+}
+
+.card-face.card-back {
+    justify-content: flex-start;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    gap: 0;
+}
+
+
+/* When flipped, maintain flip state but keep rotation */
+#flip-toggle:checked ~ .card-container .card-inner {
+    transform: rotateY(180deg);
+    transition: transform 0.6s ease;
+}
+
+/* Left edge */
+.card-face::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 100%;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e5e5e5 100%);
+    left: -8px;
+    top: 0;
+    transform-origin: right;
+    transform: rotateY(-90deg);
+    border-radius: 16px 0 0 16px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Right edge */
+.card-face::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 100%;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e5e5e5 100%);
+    right: -8px;
+    top: 0;
+    transform-origin: left;
+    transform: rotateY(90deg);
+    border-radius: 0 16px 16px 0;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+}
+
+
+/* Big @ logo on front */
+.at-logo {
+    font-size: 180px;
+    font-weight: 300;
+    color: #000000;
+    line-height: 1;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    margin-top: 80px;
+    text-align: center;
+}
+
+/* Small @ logo on back upper right */
+.at-logo-back {
+    position: absolute;
+    right: 30px;
+    top: 50px;
+    font-size: 60px;
+    font-weight: 300;
+    color: #000000;
+    line-height: 1;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    pointer-events: none;
+}
+
+/* Back side sections */
+.back-section {
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.back-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2px;
+}
+
+.back-section-label {
+    font-size: 12px;
+    color: #666666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    align-self: flex-start;
+}
+
+.back-section-logo {
+    font-size: 48px;
+    color: #000000;
+    font-weight: 300;
+    line-height: 1;
+    align-self: flex-start;
+}
+
+.back-section-value {
+    font-size: 28px;
+    color: #000000;
+    font-weight: 500;
+    margin-top: 0;
+    align-self: flex-start;
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    padding-top: 0;
+    padding-bottom: 20px;
+    width: 100%;
+    position: relative;
+}
+
+.profile-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.profile-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.profile-badge {
+    font-size: 12px;
+    color: #666666;
+    display: flex;
+    align-items: center;
+}
+
+.profile-picture {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: white;
+    font-weight: 600;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-username {
+    font-size: 12px;
+    color: #000000;
+    font-weight: 500;
+}
+
+.checkmark-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    background: #3b82f6;
+    border-radius: 50%;
+    margin-left: 4px;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
+.profile-username .checkmark {
+    color: #ffffff;
+    font-size: 10px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-badge .badge-gap {
+    display: inline-block;
+    width: 2rem;
+}
+
+
+
+/* Responsive */
+@media (max-width: 480px) {
+    .card-container {
+        width: 300px;
+        height: 450px;
+    }
+
+    .at-logo {
+        font-size: 140px;
+    }
+    
+    .back-section-value {
+        font-size: 24px;
+    }
+}
