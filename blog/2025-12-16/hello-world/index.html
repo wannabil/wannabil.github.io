@@ -27,7 +27,7 @@
                     experiences, and insights about frontend development, web technologies, and my journey as a 
                     self-taught developer.
                 </p>
-                <button id="copyLinkBtn" onclick="copyLink()">Copy article link</button>
+                <a href="/blog/2025-12-16/hello-world" class="article-link-btn">Article link</a>
             </article>
         </section>
     </main>
@@ -35,23 +35,5 @@
     <footer>
         <p>Wan Muhammad Nabil Bin Wan Ismail · Frontend Engineer</p>
     </footer>
-
-    <script>
-        function copyLink() {
-            const url = window.location.href;
-            navigator.clipboard.writeText(url).then(() => {
-                const btn = document.getElementById('copyLinkBtn');
-                const originalText = btn.textContent;
-                btn.textContent = 'Copied!';
-                btn.style.backgroundColor = '#10b981';
-                setTimeout(() => {
-                    btn.textContent = originalText;
-                    btn.style.backgroundColor = '';
-                }, 2000);
-            }).catch(err => {
-                console.error('Failed to copy:', err);
-            });
-        }
-    </script>
 </body>
 </html>

@@ -11,12 +11,14 @@
 body {
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: #101010;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     perspective: 1000px;
     overflow: hidden;
+    position: relative;
 }
 
 /* Checkbox hack for click-to-flip */
@@ -455,6 +457,29 @@ body {
 
 
 
+.back-home-button {
+    position: fixed;
+    top: calc(50% + 280px);
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.2s ease;
+    z-index: 1000;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.back-home-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(-50%) translateY(2px);
+}
+
 /* Responsive */
 @media (max-width: 480px) {
     .card-container {
@@ -468,5 +493,17 @@ body {
     
     .back-section-value {
         font-size: 24px;
+    }
+
+    .back-home-button {
+        top: calc(50% + 250px);
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    .back-home-button:hover {
+        transform: translateX(-50%) translateY(2px);
     }
 }
