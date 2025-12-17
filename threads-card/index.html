@@ -16,6 +16,8 @@
         <div class="card-inner">
             <!-- Front Side -->
             <div class="card-face">
+                <div class="at-background"></div>
+                <div class="at-gradient-overlay"></div>
                 <div class="card-cutout card-cutout-top"></div>
                 <div class="card-cutout card-cutout-bottom"></div>
                 <div class="at-logo">@</div>
@@ -24,6 +26,8 @@
 
             <!-- Back Side -->
             <div class="card-face card-back">
+                <div class="at-background"></div>
+                <div class="at-gradient-overlay"></div>
                 <div class="card-cutout card-cutout-top"></div>
                 <div class="card-cutout card-cutout-bottom"></div>
                 <div class="back-section">
@@ -57,49 +61,11 @@
                             <div class="profile-picture"><img src="wanbl-profile-picture.jpg" alt="wanbl profile"></div>
                             <div class="profile-username">wanbl <span class="checkmark-badge"><span class="checkmark">✓</span></span></div>
                         </div>
-                        <div class="profile-badge">No.<span class="badge-gap"></span>1</div>
+                        <div class="profile-badge">No.<span class="badge-gap"></span>1065441</div>
                     </div>
                 </div>
             </div>
         </div>
     </label>
-
-    <script>
-        function updateDateTime() {
-            const now = new Date();
-            
-            // Format date: WED 17 DEC
-            const days = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
-            const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
-            const dayName = days[now.getDay()];
-            const day = now.getDate();
-            const monthName = months[now.getMonth()];
-            const dateStr = `${dayName} ${day} ${monthName}`;
-            const dateElement = document.getElementById('current-date');
-            if (dateElement) {
-                dateElement.textContent = dateStr;
-            }
-            
-            // Format time: HH:MM MYT (Malaysia Time)
-            const hours = String(now.getHours()).padStart(2, '0');
-            const minutes = String(now.getMinutes()).padStart(2, '0');
-            const timeStr = `${hours}:${minutes} MYT`;
-            const timeElement = document.getElementById('current-time');
-            if (timeElement) {
-                timeElement.textContent = timeStr;
-            }
-        }
-        
-        // Wait for DOM to load, then update immediately and every minute
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', function() {
-                updateDateTime();
-                setInterval(updateDateTime, 60000); // Update every minute
-            });
-        } else {
-            updateDateTime();
-            setInterval(updateDateTime, 60000); // Update every minute
-        }
-    </script>
 </body>
 </html>
