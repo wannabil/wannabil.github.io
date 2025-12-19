@@ -245,6 +245,11 @@ footer {
     }
 
     nav a.profile-link {
-        display: none;
+        display: none !important;
+    }
+    
+    nav a[href*="wanbl.html"],
+    nav a[href*="threads-card"] {
+        display: none !important;
     }
 }
