@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello World - Blog - Wan Nabil</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../../../style.css">
 </head>
 <body>
     <header>
@@ -13,8 +13,9 @@
     </header>
 
     <nav>
-        <a href="/about.html">About</a>
-        <a href="/blog">Blog</a>
+        <a href="../../../threads-card/wanbl.html">Profile</a>
+        <a href="../../../about.html">About</a>
+        <a href="../../../blog/index.html">Blog</a>
     </nav>
 
     <main>
@@ -27,7 +28,7 @@
                     experiences, and insights about frontend development, web technologies, and my journey as a 
                     self-taught developer.
                 </p>
-                <a href="/blog/2025-12-16/hello-world" class="article-link-btn">Article link</a>
+                <a href="index.html" class="article-link-btn">Article link</a>
             </article>
         </section>
     </main>
@@ -35,5 +36,21 @@
     <footer>
         <p>Wan Muhammad Nabil Bin Wan Ismail · Frontend Engineer</p>
     </footer>
+    <script>
+        document.querySelectorAll('.article-link-btn').forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                navigator.clipboard.writeText(window.location.href).then(function() {
+                    const originalText = btn.textContent;
+                    btn.textContent = 'Link copied!';
+                    btn.style.background = 'rgba(255, 255, 255, 0.2)';
+                    setTimeout(function() {
+                        btn.textContent = originalText;
+                        btn.style.background = '';
+                    }, 2000);
+                });
+            });
+        });
+    </script>
 </body>
 </html>
