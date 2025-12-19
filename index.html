@@ -49,6 +49,9 @@
             display: block;
             text-align: center;
         }
+        nav a.profile-link {
+            display: block;
+        }
         @media (max-width: 768px) {
             html, body {
                 overflow: hidden;
@@ -70,6 +73,9 @@
             nav a {
                 font-size: 1.25rem;
             }
+            nav a.profile-link {
+                display: none;
+            }
         }
         @media (max-width: 480px) {
             h1 {
@@ -86,7 +92,7 @@
     <main>
         <h1>Wan Nabil</h1>
         <nav>
-            <a href="threads-card/wanbl.html">profile</a>
+            <a href="threads-card/wanbl.html" class="profile-link">profile</a>
             <a href="about.html">about</a>
             <a href="blog/index.html">blog</a>
         </nav>
