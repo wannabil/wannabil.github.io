@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snowflake</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #000000;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .snowflake {
+            position: absolute;
+            color: white;
+            font-size: 2em;
+            font-family: Arial;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+            animation: fall linear infinite;
+            top: -10px;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.innerHTML = '*';
+            snowflake.className = 'snowflake';
+            snowflake.style.left = Math.random() * 100 + '%';
+            const duration = Math.random() * 8 + 6;
+            snowflake.style.animationDuration = duration + 's';
+            snowflake.style.opacity = Math.random();
+            snowflake.style.fontSize = (Math.random() * 20 + 20) + 'px';
+            document.body.appendChild(snowflake);
+
+            setTimeout(() => {
+                snowflake.remove();
+            }, duration * 1000);
+        }
+
+        setInterval(createSnowflake, 100);
+    </script>
+</body>
+</html>
