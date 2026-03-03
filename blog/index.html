@@ -3,43 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Wan Nabil</title>
-    <link rel="stylesheet" href="/style.css">
+    <title>Blog — Wan Nabil</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <header>
-        <h1>Wan Muhammad Nabil Bin Wan Ismail</h1>
-        <p><strong>Self Taught Front End Developer</strong> · Built 20+ websites · Freelance at <a href="https://miraclemikhael.com">MiracleMikhael.com</a></p>
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">Wan Nabil</a>
+            <nav>
+                <a href="../index.html">Home</a>
+                <a href="../about.html">About</a>
+                <a href="index.html" class="active">Blog</a>
+            </nav>
+        </div>
     </header>
 
-    <nav>
-        <!-- <a href="../threads-card/wanbl.html" class="profile-link">Profile</a> -->
-        <a href="../about.html">About</a>
-        <a href="index.html" class="active">Blog</a>
-    </nav>
+    <main class="container animate-in">
+        <h1>Writing</h1>
+        <p class="text-muted" style="margin-bottom: 3rem;">Thoughts on frontend development, design, and career.</p>
 
-    <main>
-        <section>
-            <article>
-                <p><time>2025-12-24</time> · <a href="2025-12-24/anti-ai-slop-design-landing-page/">Anti AI-slop design landing page</a></p>
-            </article>
-            <article>
-                <p><time>2025-12-17</time> · <a href="2025-12-17/how-to-become-mid-level-developer-rm5000-month/">How to become Mid Level Developer (RM5,000/month)</a></p>
-            </article>
-            <article>
-                <p><time>2025-12-16</time> · <a href="2025-12-16/hello-world/">Hello World</a></p>
-            </article>
-        </section>
+        <div class="blog-list">
+            <a href="2025-12-24/anti-ai-slop-design-landing-page/index.html" class="blog-item animate-in">
+                <span class="blog-title">Anti AI-slop design landing page</span>
+                <p class="text-muted mb-0" style="font-size: 0.95rem;">Some ideas to make your website design not look like every other generated AI page.</p>
+                <span class="blog-date mt-4" style="display: block;">Dec 24, 2025</span>
+            </a>
+
+            <a href="2025-12-17/how-to-become-mid-level-developer-rm5000-month/index.html" class="blog-item animate-in delay-1">
+                <span class="blog-title">How to become Mid Level Developer (RM5,000/month)</span>
+                <p class="text-muted mb-0" style="font-size: 0.95rem;">A guide on being proactive and solving problems independently.</p>
+                <span class="blog-date mt-4" style="display: block;">Dec 17, 2025</span>
+            </a>
+
+            <a href="2025-12-16/hello-world/index.html" class="blog-item animate-in delay-2">
+                <span class="blog-title">Hello World</span>
+                <p class="text-muted mb-0" style="font-size: 0.95rem;">My first blog post introducing this space.</p>
+                <span class="blog-date mt-4" style="display: block;">Dec 16, 2025</span>
+            </a>
+        </div>
     </main>
 
-    <footer>
-        <p>Wan Muhammad Nabil Bin Wan Ismail · Frontend Engineer</p>
+    <footer class="container">
+        <p>&copy; 2026 Wan Nabil.</p>
     </footer>
 </body>
 </html>
-
-
-
-
-
-
