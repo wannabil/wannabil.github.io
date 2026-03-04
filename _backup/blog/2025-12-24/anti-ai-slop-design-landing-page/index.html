@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anti AI-slop design landing page - Blog - Wan Nabil</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <h1>Wan Muhammad Nabil Bin Wan Ismail</h1>
+        <p><strong>Self Taught Front End Developer</strong> · Built 20+ websites · Freelance at <a href="https://miraclemikhael.com">MiracleMikhael.com</a></p>
+    </header>
+
+    <nav>
+        <a href="../../../threads-card/wanbl.html" class="profile-link">Profile</a>
+        <a href="../../../about.html">About</a>
+        <a href="../../../blog/index.html">Blog</a>
+    </nav>
+
+    <main>
+        <section>
+            <article>
+                <h2>Anti AI-slop design landing page</h2>
+                <p>Published: <time>December 24, 2025 at 10:26 AM</time></p>
+                
+                <p>Some ideas to make your website design not looking like every other generated AI page</p>
+
+                <h3>1. Steal like an artist</h3>
+                <ul>
+                    <li>Try prompt "100 award winning website design"</li>
+                    <li>Take 1 part of the website you find pleasing to your eyes</li>
+                    <li>Replicate it, prompt it to the exact details, the font, the exact color, the animation</li>
+                    <li><strong>IMPROVE it</strong>, this is the important step, you want to differentiate, be different, how to stand out? how to make it yours, how to be yourself.</li>
+                </ul>
+
+                <h3>2. Steal like corporate</h3>
+                <ul>
+                    <li>Go to top 500 fortune company that is related to niche you want (Nike, Wise, Airbnb)</li>
+                    <li>They already have top designer designing their website</li>
+                    <li>Take what you feel like working, make your own twist</li>
+                    <li>Have bunch bunch bunch 100, 1000 references</li>
+                    <li>The devil is in the details</li>
+                    <li>Make a product on the site</li>
+                    <li>See if people actually convert</li>
+                    <li>Not working? Just change a little bit and see if it converts, repeat</li>
+                </ul>
+
+                <h3>3. How to prompt</h3>
+                <ul>
+                    <li>"Make a metaprompt to have design like Apple website"</li>
+                    <li>"What's the name of this drawing, design choice, this art" - ask everywhere what is this, prompt that</li>
+                    <li>The devil is in the details (again)</li>
+                    <li>Don't ask AI a lot of thing at once, do one thing at a time, sharp corner, glassmorphism, neobrutalist design, skeuomorphism, whatever, one thing at a time</li>
+                    <li>Why does this not like what my imagination, imagine better, see a demo video or live website site by site using second screen</li>
+                </ul>
+
+                <p>Okay I think this is enough for this post, maybe can do 2nd post if people like this kind, unedited, purposely not using AI for this, see you next time :)</p>
+
+                <a href="index.html" class="article-link-btn">Article link</a>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Wan Muhammad Nabil Bin Wan Ismail · Frontend Engineer</p>
+    </footer>
+    <script>
+        document.querySelectorAll('.article-link-btn').forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                navigator.clipboard.writeText(window.location.href).then(function() {
+                    const originalText = btn.textContent;
+                    btn.textContent = 'Link copied!';
+                    btn.style.background = 'rgba(255, 255, 255, 0.2)';
+                    setTimeout(function() {
+                        btn.textContent = originalText;
+                        btn.style.background = '';
+                    }, 2000);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
