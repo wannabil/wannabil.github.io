@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
+    color-scheme: light;
     /* Colors - Warm Corporate Light Theme */
     --bg-color: #e0f2fe; /* Sky 100 - Light sky blue */
     --bg-secondary: #ffffff; /* White */
