@@ -3,60 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#08090b">
+    <meta name="description" content="Wan Nabil — Frontend Engineer crafting accessible, performant, and beautiful web experiences.">
     <title>Wan Nabil — Frontend Engineer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="site-header">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">Wan Nabil</a>
-            <nav>
-                <a href="index.html" class="active">Home</a>
-                <a href="about.html">About</a>
-                <a href="blog/index.html">Blog</a>
-            </nav>
+    <header>
+        <div class="site-header">
+            <div class="nav-container">
+                <a href="index.html" class="logo">Wan Nabil</a>
+                <nav>
+                    <a href="index.html" class="active">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="blog/index.html">Blog</a>
+                </nav>
+            </div>
         </div>
     </header>
 
     <main class="container">
         <section class="hero animate-in">
-            <h1>Building digital products with purpose.</h1>
-            <p class="text-muted" style="font-size: 1.2rem; max-width: 500px;">
-                I'm a Frontend Engineer focused on crafting accessible, performant, and beautiful web experiences.
+            <div class="hero-eyebrow">Malaysia · Frontend Engineer</div>
+            <h1>Building digital<br>products with <span class="accent">purpose</span><span class="cursor"></span></h1>
+            <p class="hero-lede">
+                I'm Wan Nabil — I design and build accessible, performant web experiences with Next.js, React, and TypeScript.
             </p>
-            <div class="mt-4 animate-in delay-1">
-                <a href="about.html" class="btn">More about me &rarr;</a>
+            <div class="hero-actions">
+                <a href="about.html" class="btn btn-primary">
+                    About me
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+                <a href="mailto:nabil@wannabil.com" class="btn">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    Email
+                </a>
+                <a href="https://linkedin.com/in/wan-nabil" class="btn icon-btn" aria-label="LinkedIn">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="https://miraclemikhael.com" class="btn icon-btn" aria-label="Portfolio">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                </a>
             </div>
         </section>
 
-        <section class="animate-in delay-2" style="margin-top: 4rem;">
-            <h3>Recent Writing</h3>
+        <section class="animate-in delay-2">
+            <h2>Portfolio</h2>
+            <a href="https://miraclemikhael.com" target="_blank" rel="noopener" class="work-card">
+                <div class="work-preview">
+                    <div class="work-preview-inner">
+                        <iframe src="https://miraclemikhael.com" title="Miracle Mikhael Enterprise" scrolling="no" loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="work-info">
+                    <div class="work-info-text">
+                        <h3>miraclemikhael.com</h3>
+                        <p>My portfolio site — selected work, case studies, and more.</p>
+                    </div>
+                    <svg class="cta icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M7 17 17 7"/>
+                        <path d="M7 7h10v10"/>
+                    </svg>
+                </div>
+            </a>
+        </section>
+
+        <section class="animate-in delay-3">
+            <h2>Featured</h2>
+            <a href="blog/2026-02-20/oval-virtual-networking-review/index.html" class="featured">
+                <div class="featured-label">
+                    <svg class="spark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 0 L14.5 9.5 L24 12 L14.5 14.5 L12 24 L9.5 14.5 L0 12 L9.5 9.5 Z"/>
+                    </svg>
+                    Latest post
+                </div>
+                <h3>Oval Virtual Networking — A New Era to Network</h3>
+                <p>Avatar-based virtual networking for business events. Halls, booths, speed networking — first impressions on a platform that's more than another video call page.</p>
+                <span class="cta">
+                    Read post
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </span>
+            </a>
+        </section>
+
+        <section class="animate-in delay-4">
+            <h2>Recent writing</h2>
             <div class="blog-list">
-                <a href="blog/2026-02-20/oval-virtual-networking-review/index.html" class="blog-item">
-                    <span class="blog-title">Oval Virtual Networking - A New Era to Network</span>
-                    <span class="blog-date">Feb 20, 2026</span>
-                </a>
                 <a href="blog/2025-12-24/anti-ai-slop-design-landing-page/index.html" class="blog-item">
-                    <span class="blog-title">Anti AI-slop design landing page</span>
+                    <div class="blog-item-content">
+                        <span class="blog-title">Anti AI-slop design landing page</span>
+                        <p class="blog-excerpt">Ideas to make your site not look like every other generated page.</p>
+                    </div>
                     <span class="blog-date">Dec 24, 2025</span>
                 </a>
                 <a href="blog/2025-12-17/how-to-become-mid-level-developer-rm5000-month/index.html" class="blog-item">
-                    <span class="blog-title">How to become Mid Level Developer</span>
+                    <div class="blog-item-content">
+                        <span class="blog-title">How to become a Mid Level Developer</span>
+                        <p class="blog-excerpt">Being proactive and solving problems independently.</p>
+                    </div>
                     <span class="blog-date">Dec 17, 2025</span>
                 </a>
                 <a href="blog/2025-12-16/hello-world/index.html" class="blog-item">
-                    <span class="blog-title">Hello World</span>
+                    <div class="blog-item-content">
+                        <span class="blog-title">Hello World</span>
+                        <p class="blog-excerpt">My first blog post introducing this space.</p>
+                    </div>
                     <span class="blog-date">Dec 16, 2025</span>
                 </a>
             </div>
-            <div class="mt-4">
-                <a href="blog/index.html" style="font-size: 0.9rem; color: var(--text-secondary);">View all posts</a>
-            </div>
+            <a href="blog/index.html" class="inline-link">
+                View all posts
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
         </section>
+
     </main>
 
     <footer class="container">
-        <p>&copy; 2026 Wan Nabil.</p>
+        <div class="footer-inner">
+            <p>&copy; 2026 Wan Nabil</p>
+            <div class="footer-links">
+                <a href="mailto:nabil@wannabil.com" class="footer-link">Email</a>
+                <a href="https://linkedin.com/in/wan-nabil" class="footer-link">LinkedIn</a>
+                <a href="https://miraclemikhael.com" class="footer-link">Portfolio</a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

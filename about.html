@@ -3,124 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#08090b">
+    <meta name="description" content="About Wan Nabil — Frontend Engineer building production-grade applications with Next.js, React, and TypeScript.">
     <title>About — Wan Nabil</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="site-header">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">Wan Nabil</a>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html" class="active">About</a>
-                <a href="blog/index.html">Blog</a>
-            </nav>
+    <header>
+        <div class="site-header">
+            <div class="nav-container">
+                <a href="index.html" class="logo">Wan Nabil</a>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="about.html" class="active">About</a>
+                    <a href="blog/index.html">Blog</a>
+                </nav>
+            </div>
         </div>
     </header>
 
-    <main class="container animate-in">
-        <h1>About Me</h1>
-        <p class="text-muted" style="font-size: 1.1rem; max-width: 600px;">
-            Frontend engineer building production-grade applications with Next.js, React, TypeScript, and Tailwind CSS. 
-            I transform UI/UX concepts into responsive, maintainable digital products.
-        </p>
-
-        <div class="card" style="margin-top: 2rem;">
-            <h3 style="margin-bottom: 1rem;">Connect</h3>
-            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                <a href="mailto:nabil@wannabil.com" class="btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                    Email
+    <main class="container">
+        <section class="hero animate-in">
+            <div class="hero-eyebrow">About</div>
+            <h1>Frontend engineer<br>turning ideas into <span class="accent">interfaces</span>.</h1>
+            <p class="hero-lede">
+                I build production-grade applications with Next.js, React, TypeScript, and Tailwind CSS — transforming UI/UX concepts into responsive, maintainable digital products.
+            </p>
+            <div class="hero-actions">
+                <a href="mailto:nabil@wannabil.com" class="btn btn-primary">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    nabil@wannabil.com
                 </a>
                 <a href="https://linkedin.com/in/wan-nabil" class="btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
                     LinkedIn
                 </a>
                 <a href="https://miraclemikhael.com" class="btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
                     Portfolio
                 </a>
                 <a href="tel:+60182934765" class="btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                     +60 18-293-4765
                 </a>
             </div>
-        </div>
+        </section>
 
-        <h2>Experience</h2>
-        
-        <div class="experience-item card animate-in delay-1">
-            <div class="experience-header">
-                <h3>Freelance Front-End Developer</h3>
-                <span class="date">Oct 2024 – Present</span>
-            </div>
-            <p class="text-muted mb-0">Miracle Mikhael Enterprise</p>
-            <ul style="margin-top: 1rem; padding-left: 1.2rem; color: var(--text-secondary);">
-                <li>Develop and deploy modern websites using Next.js and TypeScript</li>
-                <li>Build responsive interfaces with Tailwind CSS and reusable components</li>
-                <li>Integrate Supabase and REST APIs for data handling</li>
-                <li>Deploy and optimize on Cloudflare and Vercel</li>
-            </ul>
-        </div>
+        <section class="animate-in delay-1">
+            <h2>Experience</h2>
 
-        <div class="experience-item card animate-in delay-2">
-            <div class="experience-header">
-                <h3>Manager</h3>
-                <span class="date">Mar 2018 – Present</span>
-            </div>
-            <p class="text-muted mb-0">Amanis Enterprise (Petrol Station)</p>
-            <ul style="margin-top: 1rem; padding-left: 1.2rem; color: var(--text-secondary);">
-                <li>Oversee daily operations and lead team of 13 staff</li>
-                <li>Manage KPIs, finances, and workflow systems</li>
-            </ul>
-        </div>
-
-        <h2>Skills</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem;">
             <div class="card">
-                <h3>Languages</h3>
-                <p class="text-muted mb-0">TypeScript, JavaScript, HTML, CSS, SQL</p>
+                <div class="experience-header">
+                    <h3>Freelance Frontend Developer</h3>
+                    <span class="date">Oct 2024 — Present</span>
+                </div>
+                <p class="text-muted mb-0">Miracle Mikhael Enterprise</p>
+                <ul>
+                    <li>Develop and deploy modern websites using Next.js and TypeScript</li>
+                    <li>Build responsive interfaces with Tailwind CSS and reusable components</li>
+                    <li>Integrate Supabase and REST APIs for data handling</li>
+                    <li>Deploy and optimize on Cloudflare and Vercel</li>
+                </ul>
             </div>
-            <div class="card">
-                <h3>Frameworks</h3>
-                <p class="text-muted mb-0">Next.js, React, Tailwind CSS, shadcn/ui</p>
-            </div>
-            <div class="card">
-                <h3>Tools</h3>
-                <p class="text-muted mb-0">Supabase, REST APIs, Git, Cloudflare, Vercel</p>
-            </div>
-        </div>
 
-        <h2>Education & Certifications</h2>
-        <div class="card">
-            <div class="experience-item mb-0">
+            <div class="card">
                 <div class="experience-header">
-                    <h3>Diploma in Mass Communication</h3>
-                    <span class="date">2018</span>
+                    <h3>Manager</h3>
+                    <span class="date">Mar 2018 — Present</span>
                 </div>
-                <p class="text-muted">Universiti Teknologi MARA (UiTM)</p>
+                <p class="text-muted mb-0">Amanis Enterprise (Petrol Station)</p>
+                <ul>
+                    <li>Oversee daily operations and lead team of 13 staff</li>
+                    <li>Manage KPIs, finances, and workflow systems</li>
+                </ul>
             </div>
-            <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 1.5rem 0;">
-            <div class="experience-item mb-0">
-                <div class="experience-header">
-                    <h3>CompTIA Security+</h3>
-                    <span class="date">Aug 2025</span>
+        </section>
+
+        <section class="animate-in delay-2">
+            <h2>Skills</h2>
+            <div class="card">
+                <div class="skill-group">
+                    <div class="skill-label">Languages</div>
+                    <div class="chip-grid">
+                        <span class="chip">TypeScript</span>
+                        <span class="chip">JavaScript</span>
+                        <span class="chip">HTML</span>
+                        <span class="chip">CSS</span>
+                        <span class="chip">SQL</span>
+                    </div>
                 </div>
-                <p class="text-muted">Credential ID COMP001022866432</p>
-            </div>
-            <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 1.5rem 0;">
-            <div class="experience-item mb-0">
-                <div class="experience-header">
-                    <h3>Google Cybersecurity</h3>
-                    <span class="date">Mar 2025</span>
+                <div class="skill-group">
+                    <div class="skill-label">Frameworks & libraries</div>
+                    <div class="chip-grid">
+                        <span class="chip">Next.js</span>
+                        <span class="chip">React</span>
+                        <span class="chip">Tailwind CSS</span>
+                        <span class="chip">shadcn/ui</span>
+                    </div>
                 </div>
-                <p class="text-muted">Credential ID 2P6IP98G6S18</p>
+                <div class="skill-group">
+                    <div class="skill-label">Tools & platforms</div>
+                    <div class="chip-grid">
+                        <span class="chip">Supabase</span>
+                        <span class="chip">REST APIs</span>
+                        <span class="chip">Git</span>
+                        <span class="chip">Cloudflare</span>
+                        <span class="chip">Vercel</span>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <section class="animate-in delay-3">
+            <h2>Education & Certifications</h2>
+            <div class="card">
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3>Diploma in Mass Communication</h3>
+                        <span class="date">2018</span>
+                    </div>
+                    <p class="text-muted mb-0">Universiti Teknologi MARA (UiTM)</p>
+                </div>
+                <div class="experience-item mt-6">
+                    <div class="experience-header">
+                        <h3>CompTIA Security+</h3>
+                        <span class="date">Aug 2025</span>
+                    </div>
+                    <p class="text-muted mb-0">Credential ID COMP001022866432</p>
+                </div>
+                <div class="experience-item mt-6">
+                    <div class="experience-header">
+                        <h3>Google Cybersecurity</h3>
+                        <span class="date">Mar 2025</span>
+                    </div>
+                    <p class="text-muted mb-0">Credential ID 2P6IP98G6S18</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="container">
-        <p>&copy; 2026 Wan Nabil.</p>
+        <div class="footer-inner">
+            <p>&copy; 2026 Wan Nabil</p>
+            <div class="footer-links">
+                <a href="mailto:nabil@wannabil.com" class="footer-link">Email</a>
+                <a href="https://linkedin.com/in/wan-nabil" class="footer-link">LinkedIn</a>
+                <a href="https://miraclemikhael.com" class="footer-link">Portfolio</a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

@@ -3,54 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#08090b">
+    <meta name="description" content="Thoughts on frontend development, design, and career by Wan Nabil.">
     <title>Blog — Wan Nabil</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <header class="site-header">
-        <div class="container nav-container">
-            <a href="../index.html" class="logo">Wan Nabil</a>
-            <nav>
-                <a href="../index.html">Home</a>
-                <a href="../about.html">About</a>
-                <a href="index.html" class="active">Blog</a>
-            </nav>
+    <header>
+        <div class="site-header">
+            <div class="nav-container">
+                <a href="../index.html" class="logo">Wan Nabil</a>
+                <nav>
+                    <a href="../index.html">Home</a>
+                    <a href="../about.html">About</a>
+                    <a href="index.html" class="active">Blog</a>
+                </nav>
+            </div>
         </div>
     </header>
 
-    <main class="container animate-in">
-        <h1>Writing</h1>
-        <p class="text-muted" style="margin-bottom: 3rem;">Thoughts on frontend development, design, and career.</p>
+    <main class="container">
+        <section class="hero animate-in">
+            <div class="hero-eyebrow">Writing</div>
+            <h1>Notes & <span class="accent">essays</span>.</h1>
+            <p class="hero-lede">
+                Thoughts on frontend development, design, and career — short-form notes, longer essays, and everything in between.
+            </p>
+        </section>
 
-        <div class="blog-list">
-            <a href="/blog/2026-02-20/oval-virtual-networking-review/index.html" class="blog-item animate-in">
-                <span class="blog-title">Oval Virtual Networking - A New Era to Network</span>
-                <p class="text-muted mb-0" style="font-size: 0.95rem;">A look at Oval's avatar-based virtual networking platform for business.</p>
-                <span class="blog-date mt-4" style="display: block;">Feb 20, 2026</span>
-            </a>
-
-            <a href="/blog/2025-12-24/anti-ai-slop-design-landing-page/index.html" class="blog-item animate-in delay-1">
-                <span class="blog-title">Anti AI-slop design landing page</span>
-                <p class="text-muted mb-0" style="font-size: 0.95rem;">Some ideas to make your website design not look like every other generated AI page.</p>
-                <span class="blog-date mt-4" style="display: block;">Dec 24, 2025</span>
-            </a>
-
-            <a href="/blog/2025-12-17/how-to-become-mid-level-developer-rm5000-month/index.html" class="blog-item animate-in delay-2">
-                <span class="blog-title">How to become Mid Level Developer (RM5,000/month)</span>
-                <p class="text-muted mb-0" style="font-size: 0.95rem;">A guide on being proactive and solving problems independently.</p>
-                <span class="blog-date mt-4" style="display: block;">Dec 17, 2025</span>
-            </a>
-
-            <a href="/blog/2025-12-16/hello-world/index.html" class="blog-item animate-in delay-3">
-                <span class="blog-title">Hello World</span>
-                <p class="text-muted mb-0" style="font-size: 0.95rem;">My first blog post introducing this space.</p>
-                <span class="blog-date mt-4" style="display: block;">Dec 16, 2025</span>
-            </a>
-        </div>
+        <section class="animate-in delay-1">
+            <div class="blog-list">
+                <a href="/blog/2026-02-20/oval-virtual-networking-review/index.html" class="blog-item">
+                    <div class="blog-item-content">
+                        <span class="blog-title">Oval Virtual Networking — A New Era to Network</span>
+                        <p class="blog-excerpt">A look at Oval's avatar-based virtual networking platform for business.</p>
+                    </div>
+                    <span class="blog-date">Feb 20, 2026</span>
+                </a>
+                <a href="/blog/2025-12-24/anti-ai-slop-design-landing-page/index.html" class="blog-item">
+                    <div class="blog-item-content">
+                        <span class="blog-title">Anti AI-slop design landing page</span>
+                        <p class="blog-excerpt">Ideas to make your website design not look like every other generated AI page.</p>
+                    </div>
+                    <span class="blog-date">Dec 24, 2025</span>
+                </a>
+                <a href="/blog/2025-12-17/how-to-become-mid-level-developer-rm5000-month/index.html" class="blog-item">
+                    <div class="blog-item-content">
+                        <span class="blog-title">How to become a Mid Level Developer (RM5,000/month)</span>
+                        <p class="blog-excerpt">A guide on being proactive and solving problems independently.</p>
+                    </div>
+                    <span class="blog-date">Dec 17, 2025</span>
+                </a>
+                <a href="/blog/2025-12-16/hello-world/index.html" class="blog-item">
+                    <div class="blog-item-content">
+                        <span class="blog-title">Hello World</span>
+                        <p class="blog-excerpt">My first blog post introducing this space.</p>
+                    </div>
+                    <span class="blog-date">Dec 16, 2025</span>
+                </a>
+            </div>
+        </section>
     </main>
 
     <footer class="container">
-        <p>&copy; 2026 Wan Nabil.</p>
+        <div class="footer-inner">
+            <p>&copy; 2026 Wan Nabil</p>
+            <div class="footer-links">
+                <a href="mailto:nabil@wannabil.com" class="footer-link">Email</a>
+                <a href="https://linkedin.com/in/wan-nabil" class="footer-link">LinkedIn</a>
+                <a href="https://miraclemikhael.com" class="footer-link">Portfolio</a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
